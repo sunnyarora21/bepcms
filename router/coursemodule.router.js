@@ -37,6 +37,17 @@ courseModuleRoute.route('/:id').get(function (req,res) {
     });
 });
 
+courseModuleRoute.route('/:courseid').get(function (req,res) {
+    let id = req.params.courseid;
+    CourseModule.findById({courseid: id}, function (err, data) {
+        if (err) {
+            throw err;
+        } else {
+            res.json({ output: data });
+        }
+    });
+});
+
 courseModuleRoute.route('/:id').patch(function (req,res) {
     let id = req.params.id;
     CourseModule.findById({_id: id }, function (err, data) {
