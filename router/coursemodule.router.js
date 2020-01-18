@@ -39,7 +39,7 @@ courseModuleRoute.route('/:id').get(function (req,res) {
 
 courseModuleRoute.route('/:courseid').get(function (req,res) {
     let id = req.params.courseid;
-    CourseModule.findById({courseid: id}, function (err, data) {
+    CourseModule.find({courseid: id}, function (err, data) {
         if (err) {
             throw err;
         } else {
