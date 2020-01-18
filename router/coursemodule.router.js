@@ -37,7 +37,7 @@ courseModuleRoute.route('/:id').get(function (req,res) {
     });
 });
 
-courseModuleRoute.route('/:courseid').get(function (req,res) {
+courseModuleRoute.route('/sub/:courseid').get(function (req,res) {
     let id = req.params.courseid;
     CourseModule.find({courseid: id}, function (err, data) {
         if (err) {
