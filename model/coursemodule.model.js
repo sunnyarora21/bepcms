@@ -8,7 +8,7 @@ const Schema = mongoose.Schema;
 let CourseModule = new Schema(
     {
         // schema property: values
-        courseid: { type: String },
+        courseid: { type: Number },
         coursemodules: {
             type: Array
         }
